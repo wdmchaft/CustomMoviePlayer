@@ -6,9 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@class CustomMoviePlayerViewController;
+#import <UIKit/UIKit.h> 
 
 @interface CustomMoviePlayerAppDelegate : NSObject <UIApplicationDelegate> {
 
@@ -16,6 +14,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet CustomMoviePlayerViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIViewController *viewController;
 
 @end

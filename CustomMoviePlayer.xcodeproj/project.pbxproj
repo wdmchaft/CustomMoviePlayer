@@ -16,6 +16,8 @@
 		48880759137F2ECC006CC9DB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48880757137F2ECC006CC9DB /* MainWindow.xib */; };
 		4888075C137F2ECC006CC9DB /* CustomMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4888075B137F2ECC006CC9DB /* CustomMoviePlayerViewController.m */; };
 		4888075F137F2ECC006CC9DB /* CustomMoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4888075D137F2ECC006CC9DB /* CustomMoviePlayerViewController.xib */; };
+		48880766137F325F006CC9DB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880765137F325F006CC9DB /* MediaPlayer.framework */; };
+		48880768137F35B5006CC9DB /* Movie.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 48880767137F35B5006CC9DB /* Movie.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		4888075A137F2ECC006CC9DB /* CustomMoviePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMoviePlayerViewController.h; sourceTree = "<group>"; };
 		4888075B137F2ECC006CC9DB /* CustomMoviePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomMoviePlayerViewController.m; sourceTree = "<group>"; };
 		4888075E137F2ECC006CC9DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CustomMoviePlayerViewController.xib; sourceTree = "<group>"; };
+		48880765137F325F006CC9DB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		48880767137F35B5006CC9DB /* Movie.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movie.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48880766137F325F006CC9DB /* MediaPlayer.framework in Frameworks */,
 				48880746137F2ECC006CC9DB /* UIKit.framework in Frameworks */,
 				48880748137F2ECC006CC9DB /* Foundation.framework in Frameworks */,
 				4888074A137F2ECC006CC9DB /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +74,7 @@
 		48880744137F2ECC006CC9DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48880765137F325F006CC9DB /* MediaPlayer.framework */,
 				48880745137F2ECC006CC9DB /* UIKit.framework */,
 				48880747137F2ECC006CC9DB /* Foundation.framework */,
 				48880749137F2ECC006CC9DB /* CoreGraphics.framework */,
@@ -79,6 +85,7 @@
 		4888074B137F2ECC006CC9DB /* CustomMoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				48880767137F35B5006CC9DB /* Movie.m4v */,
 				48880754137F2ECC006CC9DB /* CustomMoviePlayerAppDelegate.h */,
 				48880755137F2ECC006CC9DB /* CustomMoviePlayerAppDelegate.m */,
 				48880757137F2ECC006CC9DB /* MainWindow.xib */,
@@ -151,6 +158,7 @@
 				48880750137F2ECC006CC9DB /* InfoPlist.strings in Resources */,
 				48880759137F2ECC006CC9DB /* MainWindow.xib in Resources */,
 				4888075F137F2ECC006CC9DB /* CustomMoviePlayerViewController.xib in Resources */,
+				48880768137F35B5006CC9DB /* Movie.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

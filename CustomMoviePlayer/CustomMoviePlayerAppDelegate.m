@@ -20,7 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
+    
+    NSString *movieFilePath =  [[ NSBundle mainBundle] pathForResource:@"Movie.m4v" ofType:nil];
+    NSLog(@"movie file path: %@",movieFilePath);
+    
+    CustomMoviePlayerViewController *customMoviePlayerViewController = [[CustomMoviePlayerViewController alloc] initWithMovieURL:movieFilePath];
+    
+    self.viewController = customMoviePlayerViewController;
+
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
