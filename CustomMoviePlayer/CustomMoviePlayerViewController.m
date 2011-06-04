@@ -55,7 +55,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
     
-    //add video to subviewe
+    //add video to subview
     NSURL *movieURL = [NSURL fileURLWithPath:self.filePath];
     
     MPMoviePlayerController *mp = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
