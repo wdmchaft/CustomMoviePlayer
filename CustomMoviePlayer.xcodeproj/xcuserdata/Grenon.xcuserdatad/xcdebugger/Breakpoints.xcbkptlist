@@ -23,25 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "327104367.262357"
+         timestampString = "328918751.757474"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
-         landmarkName = "-handleDurationAvailableNotification"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "327104388.439985"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "327104491.118718"
+         timestampString = "328918751.757474"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "56"
+         endingLineNumber = "56"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -65,12 +51,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "327104492.259182"
+         timestampString = "328918924.597138"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
+         landmarkName = "-setTotalVideoTimeDuration"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

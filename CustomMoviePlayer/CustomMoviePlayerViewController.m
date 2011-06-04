@@ -10,13 +10,20 @@
 
 @implementation CustomMoviePlayerViewController
 
-@synthesize btnPlay;
-@synthesize btnStop;
 @synthesize sliderTimeline;
 @synthesize filePath;
+@synthesize movieTitle;
+@synthesize player_type;
+
 @synthesize moviePlayer;
 @synthesize totalVideoTime;
-@synthesize imgPreviewImage;  
+@synthesize imgPreviewImage;
+@synthesize btnReturnToCarousel;
+@synthesize ShowReturnToCarouselButton;
+@synthesize toolMovieControls;
+@synthesize barPlay;
+@synthesize barStepForward;
+@synthesize barStepBackward; 
 
 - (void)dealloc
 {
@@ -48,10 +55,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDurationAvailableNotification)
-                                                 name:MPMovieDurationAvailableNotification
-                                               object:self.moviePlayer];
-    
     //add video to subviewe
     NSURL *movieURL = [NSURL fileURLWithPath:self.filePath];
     
@@ -63,6 +66,7 @@
 		[mp release];
 		
         //get movie preview image so there will be no blink when the movie starts
+        [self performSelector:@selector(setTotalVideoTimeDuration) withObject:nil afterDelay:0.1];
         imgPreviewImage.image = [self.moviePlayer thumbnailImageAtTime:0.0 timeOption:MPMovieTimeOptionNearestKeyFrame];
         
 		// Apply the user specified settings to the movie player object
@@ -84,12 +88,14 @@
     
 -(void)playerPlaybackDidFinish:(NSNotification*)notification
 {
-    [self.btnPlay setTitle:@"Play" forState:UIControlStateNormal];
+    barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
+    barPlay.tag = 0;
 }
 
--(void)handleDurationAvailableNotification
+-(void)setTotalVideoTimeDuration
 {
     self.totalVideoTime = self.moviePlayer.duration;
+    //NSLog(@"totalVideoTime: %f",self.totalVideoTime);
     self.moviePlayer.currentPlaybackTime = 0;
 }
 
@@ -102,40 +108,43 @@
 -(IBAction)playMovie
 {
     self.moviePlayer.view.hidden = NO;
-    if ([btnPlay.titleLabel.text isEqualToString:@"Play"]) 
-    {           
+    if (barPlay.tag == 0) 
+    {       
         if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
         {
+            //-------- rewind code:
             self.moviePlayer.currentPlaybackTime = 0;
             self.sliderTimeline.value = 0.0;
         }        
         
+        NSLog(@"timeline: %f",self.sliderTimeline.value);
+        // self.moviePlayer.currentPlaybackTime = 0;
         [self monitorPlaybackTime];
         [self.moviePlayer play];
         
-        [btnPlay setTitle:@"Pause" forState:UIControlStateNormal];
+        barPlay.image = [UIImage imageNamed:@"UIButtonBarPause.png"];
+        barPlay.tag = 1;
     }
-    else if([btnPlay.titleLabel.text isEqualToString:@"Pause"])
+    else if(barPlay.tag == 1)
     {
         [self.moviePlayer pause];
-        [btnPlay setTitle:@"Play" forState:UIControlStateNormal];
-    }         
-}
-
--(IBAction)stopMovie
-{
-    [self.moviePlayer stop];
-    [self.btnPlay setTitle:@"Play" forState:UIControlStateNormal];
+        barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
+        barPlay.tag = 0;
+    }          
 }
 
 -(void)monitorPlaybackTime
 {
+    NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
     self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime / self.totalVideoTime;
-    
-    //checking if at the end of video:
+    //constantly keep checking if at the end of video:
     if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
     {
+        //-------- rewind code:
+        //self.moviePlayer.currentPlaybackTime = 0;
         [self.moviePlayer pause];
+        barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
+        barPlay.tag = 0;
     }
     else
     {
@@ -173,6 +182,11 @@
 {
     // Return YES for supported orientations
     return YES;
+}
+
+-(IBAction)setValueByTouch:(UISlider*)sender
+{
+    NSLog(@"touch location");
 }
 
 @end
