@@ -1,6 +1,8 @@
 Custom MoviePlayer for iPad
 =============
 
+<img style="float:right" src="https://github.com/joshgrenon/CustomMoviePlayer/raw/master/screenshot.png" alt="Screenshot" />
+
 How to install:
 
 - Add MediaPlayer.framework to your project in Xcode

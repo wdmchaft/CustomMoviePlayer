@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "CustomUISlider.h"
 
 @interface CustomMoviePlayerViewController : UIViewController {
     
-    IBOutlet UISlider *sliderTimeline;
+    IBOutlet CustomUISlider *sliderTimeline;
     IBOutlet UIImageView *imgPreviewImage;
     
     IBOutlet UIToolbar *toolMovieControls;
@@ -35,7 +36,7 @@
 -(id)initWithMovieURL:(NSString *)fileURL;
 
 @property(nonatomic, retain) IBOutlet UIImageView *imgPreviewImage;
-@property(nonatomic, retain) IBOutlet UISlider *sliderTimeline;
+@property(nonatomic, retain) IBOutlet CustomUISlider *sliderTimeline;
 
 @property(nonatomic, retain) IBOutlet UIToolbar *toolMovieControls;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *barPlay;

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		480E0478139AE4AC000D9DA7 /* UIButtonBarPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 480E0476139AE4AC000D9DA7 /* UIButtonBarPause.png */; };
 		480E0479139AE4AC000D9DA7 /* UIButtonBarPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 480E0477139AE4AC000D9DA7 /* UIButtonBarPlay.png */; };
+		480E0487139B19D2000D9DA7 /* CustomUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 480E0486139B19D2000D9DA7 /* CustomUISlider.m */; };
 		48880746137F2ECC006CC9DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880745137F2ECC006CC9DB /* UIKit.framework */; };
 		48880748137F2ECC006CC9DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880747137F2ECC006CC9DB /* Foundation.framework */; };
 		4888074A137F2ECC006CC9DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880749137F2ECC006CC9DB /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		480E0476139AE4AC000D9DA7 /* UIButtonBarPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarPause.png; sourceTree = "<group>"; };
 		480E0477139AE4AC000D9DA7 /* UIButtonBarPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarPlay.png; sourceTree = "<group>"; };
+		480E0485139B19D2000D9DA7 /* CustomUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISlider.h; sourceTree = "<group>"; };
+		480E0486139B19D2000D9DA7 /* CustomUISlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISlider.m; sourceTree = "<group>"; };
 		48880741137F2ECC006CC9DB /* CustomMoviePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMoviePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48880745137F2ECC006CC9DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48880747137F2ECC006CC9DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480E0483139B19AA000D9DA7 /* CustomUISlider */ = {
+			isa = PBXGroup;
+			children = (
+				480E0485139B19D2000D9DA7 /* CustomUISlider.h */,
+				480E0486139B19D2000D9DA7 /* CustomUISlider.m */,
+			);
+			name = CustomUISlider;
+			sourceTree = "<group>";
+		};
 		48880736137F2ECC006CC9DB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		4888074B137F2ECC006CC9DB /* CustomMoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				480E0483139B19AA000D9DA7 /* CustomUISlider */,
 				48880767137F35B5006CC9DB /* Movie.m4v */,
 				48880754137F2ECC006CC9DB /* CustomMoviePlayerAppDelegate.h */,
 				48880755137F2ECC006CC9DB /* CustomMoviePlayerAppDelegate.m */,
@@ -180,6 +193,7 @@
 				48880753137F2ECC006CC9DB /* main.m in Sources */,
 				48880756137F2ECC006CC9DB /* CustomMoviePlayerAppDelegate.m in Sources */,
 				4888075C137F2ECC006CC9DB /* CustomMoviePlayerViewController.m in Sources */,
+				480E0487139B19D2000D9DA7 /* CustomUISlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

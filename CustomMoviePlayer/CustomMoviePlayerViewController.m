@@ -77,6 +77,8 @@
         [self.view addSubview:moviePlayer.view];
         moviePlayer.view.frame = CGRectMake(20, 20, 728, 594);
     }
+    
+    NSLog(@"UISlider: %@",self.sliderTimeline.subviews);
 }
     
 - (void)viewDidUnload
@@ -117,7 +119,7 @@
             self.sliderTimeline.value = 0.0;
         }        
         
-        NSLog(@"timeline: %f",self.sliderTimeline.value);
+        //NSLog(@"timeline: %f",self.sliderTimeline.value);
         // self.moviePlayer.currentPlaybackTime = 0;
         [self monitorPlaybackTime];
         [self.moviePlayer play];
@@ -135,7 +137,7 @@
 
 -(void)monitorPlaybackTime
 {
-    NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
+    //NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
     self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime / self.totalVideoTime;
     //constantly keep checking if at the end of video:
     if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
