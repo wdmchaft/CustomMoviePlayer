@@ -8,10 +8,10 @@
 
 #import "CustomUISlider.h"
 
-
 @implementation CustomUISlider
 
 @synthesize totalVideoTime;
+@synthesize IsTouch;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,23 +22,35 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (CGRect)thumbRect {
+    CGRect trackRect = [self trackRectForBounds:self.bounds];
+    CGRect thumbR = [self thumbRectForBounds:self.bounds
+                                   trackRect:trackRect
+                                       value:self.value];
+    return thumbR;
 }
-*/
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    
-    NSLog(@"in begintracking");
+       
+    IsTouch = YES;
     
     CGPoint touchPoint = [touch locationInView:self];
-    NSLog(@"touhcpoint: %@",NSStringFromCGPoint(touchPoint));
     
-    [self setValue:0.6 animated:YES];
+    if(!CGRectContainsPoint(self.thumbRect, touchPoint)) 
+    {
+        NSLog(@"totalvideotime: %f",self.totalVideoTime);
+        
+        CGFloat touchDivider = self.frame.size.width/self.totalVideoTime;
+        
+        CGFloat touchedLocation = touchPoint.x/touchDivider;
+        
+        NSLog(@"touched value: %f",touchedLocation);
+        //NSLog(@"width: %f",self.frame.size.width);
+        NSLog(@"touhcpoint: %@",NSStringFromCGPoint(touchPoint));
+        
+        [self setValue:touchedLocation animated:NO];
+    }   
+
     
     return [super beginTrackingWithTouch:touch withEvent:event];
 }
@@ -58,6 +70,7 @@
    
     NSLog(@"in endtracking");
     
+       
     [super endTrackingWithTouch:touch withEvent:event];
 }
 

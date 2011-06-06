@@ -10,6 +10,12 @@
 		480E0478139AE4AC000D9DA7 /* UIButtonBarPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 480E0476139AE4AC000D9DA7 /* UIButtonBarPause.png */; };
 		480E0479139AE4AC000D9DA7 /* UIButtonBarPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 480E0477139AE4AC000D9DA7 /* UIButtonBarPlay.png */; };
 		480E0487139B19D2000D9DA7 /* CustomUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 480E0486139B19D2000D9DA7 /* CustomUISlider.m */; };
+		4859E9C9139C8C1200231A87 /* UIButtonBarFastForward.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9C8139C8C1200231A87 /* UIButtonBarFastForward.png */; };
+		4859E9CC139C8C2A00231A87 /* UIButtonBarRewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9CB139C8C2A00231A87 /* UIButtonBarRewind.png */; };
+		4859E9CE139C90AA00231A87 /* UIButtonBarFastForwardGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9CD139C90AA00231A87 /* UIButtonBarFastForwardGray.png */; };
+		4859E9D0139C92A900231A87 /* UIButtonBarRewindGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9CF139C92A900231A87 /* UIButtonBarRewindGray.png */; };
+		4859E9D2139CA31300231A87 /* UIButtonBarPlayGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9D1139CA31200231A87 /* UIButtonBarPlayGray.png */; };
+		4859E9D4139CB08300231A87 /* UIButtonBarPauseGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859E9D3139CB08300231A87 /* UIButtonBarPauseGray.png */; };
 		48880746137F2ECC006CC9DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880745137F2ECC006CC9DB /* UIKit.framework */; };
 		48880748137F2ECC006CC9DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880747137F2ECC006CC9DB /* Foundation.framework */; };
 		4888074A137F2ECC006CC9DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48880749137F2ECC006CC9DB /* CoreGraphics.framework */; };
@@ -28,6 +34,12 @@
 		480E0477139AE4AC000D9DA7 /* UIButtonBarPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarPlay.png; sourceTree = "<group>"; };
 		480E0485139B19D2000D9DA7 /* CustomUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISlider.h; sourceTree = "<group>"; };
 		480E0486139B19D2000D9DA7 /* CustomUISlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISlider.m; sourceTree = "<group>"; };
+		4859E9C8139C8C1200231A87 /* UIButtonBarFastForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarFastForward.png; sourceTree = "<group>"; };
+		4859E9CB139C8C2A00231A87 /* UIButtonBarRewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarRewind.png; sourceTree = "<group>"; };
+		4859E9CD139C90AA00231A87 /* UIButtonBarFastForwardGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarFastForwardGray.png; sourceTree = "<group>"; };
+		4859E9CF139C92A900231A87 /* UIButtonBarRewindGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarRewindGray.png; sourceTree = "<group>"; };
+		4859E9D1139CA31200231A87 /* UIButtonBarPlayGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarPlayGray.png; sourceTree = "<group>"; };
+		4859E9D3139CB08300231A87 /* UIButtonBarPauseGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarPauseGray.png; sourceTree = "<group>"; };
 		48880741137F2ECC006CC9DB /* CustomMoviePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMoviePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48880745137F2ECC006CC9DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48880747137F2ECC006CC9DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,7 +129,13 @@
 		4888074C137F2ECC006CC9DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4859E9D3139CB08300231A87 /* UIButtonBarPauseGray.png */,
+				4859E9CD139C90AA00231A87 /* UIButtonBarFastForwardGray.png */,
+				4859E9D1139CA31200231A87 /* UIButtonBarPlayGray.png */,
+				4859E9CB139C8C2A00231A87 /* UIButtonBarRewind.png */,
+				4859E9CF139C92A900231A87 /* UIButtonBarRewindGray.png */,
 				480E0476139AE4AC000D9DA7 /* UIButtonBarPause.png */,
+				4859E9C8139C8C1200231A87 /* UIButtonBarFastForward.png */,
 				480E0477139AE4AC000D9DA7 /* UIButtonBarPlay.png */,
 				4888074D137F2ECC006CC9DB /* CustomMoviePlayer-Info.plist */,
 				4888074E137F2ECC006CC9DB /* InfoPlist.strings */,
@@ -180,6 +198,12 @@
 				48880768137F35B5006CC9DB /* Movie.m4v in Resources */,
 				480E0478139AE4AC000D9DA7 /* UIButtonBarPause.png in Resources */,
 				480E0479139AE4AC000D9DA7 /* UIButtonBarPlay.png in Resources */,
+				4859E9C9139C8C1200231A87 /* UIButtonBarFastForward.png in Resources */,
+				4859E9CC139C8C2A00231A87 /* UIButtonBarRewind.png in Resources */,
+				4859E9CE139C90AA00231A87 /* UIButtonBarFastForwardGray.png in Resources */,
+				4859E9D0139C92A900231A87 /* UIButtonBarRewindGray.png in Resources */,
+				4859E9D2139CA31300231A87 /* UIButtonBarPlayGray.png in Resources */,
+				4859E9D4139CB08300231A87 /* UIButtonBarPauseGray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

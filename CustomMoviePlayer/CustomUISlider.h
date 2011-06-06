@@ -12,8 +12,12 @@
 @interface CustomUISlider : UISlider {
     
     NSTimeInterval totalVideoTime;
+    BOOL IsTouch;
 }
 
 @property(nonatomic, assign) NSTimeInterval totalVideoTime;
+@property(nonatomic, assign) BOOL IsTouch;
+
+- (CGRect)thumbRect;
 
 @end

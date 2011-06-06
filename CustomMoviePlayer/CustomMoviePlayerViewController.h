@@ -17,18 +17,14 @@
     
     IBOutlet UIToolbar *toolMovieControls;
     
-    IBOutlet UIBarButtonItem *barPlay;
-    IBOutlet UIBarButtonItem *barStepForward;
-    IBOutlet UIBarButtonItem *barStepBackward;
+    IBOutlet UIButton *btnPlay;
+    IBOutlet UIButton *btnFastForward;
+    IBOutlet UIButton *btnRewind;
     
     NSString *filePath;
     NSString *movieTitle;
     NSString *player_type;
-    
-    BOOL ShowReturnToCarouselButton;
-    
-    IBOutlet UIButton *btnReturnToCarousel;
-    
+        
     MPMoviePlayerController *moviePlayer;
     NSTimeInterval totalVideoTime; 
 }
@@ -39,26 +35,33 @@
 @property(nonatomic, retain) IBOutlet CustomUISlider *sliderTimeline;
 
 @property(nonatomic, retain) IBOutlet UIToolbar *toolMovieControls;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *barPlay;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *barStepForward;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *barStepBackward;
+@property(nonatomic, retain) IBOutlet UIButton *btnPlay;
+@property(nonatomic, retain) IBOutlet UIButton *btnFastForward;
+@property(nonatomic, retain) IBOutlet UIButton *btnRewind;
 
 @property(nonatomic, retain) NSString *filePath;
 @property(nonatomic, retain) NSString *movieTitle;
 @property(nonatomic, retain) NSString *player_type;
-
-@property(nonatomic, assign) BOOL ShowReturnToCarouselButton;
-@property(nonatomic, retain) IBOutlet UIButton *btnReturnToCarousel;
 
 @property (readwrite, retain) MPMoviePlayerController *moviePlayer;
 @property(nonatomic, assign) NSTimeInterval totalVideoTime;
 
 -(void)setMoviePlayerUserSettings;
 -(IBAction)playMovie; 
+
+-(IBAction)fastforward_touchdown; 
+-(IBAction)fastforward_touchup; 
+
+-(IBAction)rewind_touchdown; 
+-(IBAction)rewind_touchup; 
+
+-(IBAction)rewind; 
 -(void)monitorPlaybackTime;
 -(IBAction)onTimeSliderChange:(UISlider*)sender;
  
 -(void)setTotalVideoTimeDuration;
 -(IBAction)setValueByTouch:(UISlider*)sender;
+-(void)resetSlider;
+-(void)setCurrentMovieTime;
 
 @end

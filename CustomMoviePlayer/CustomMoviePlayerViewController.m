@@ -18,12 +18,10 @@
 @synthesize moviePlayer;
 @synthesize totalVideoTime;
 @synthesize imgPreviewImage;
-@synthesize btnReturnToCarousel;
-@synthesize ShowReturnToCarouselButton;
 @synthesize toolMovieControls;
-@synthesize barPlay;
-@synthesize barStepForward;
-@synthesize barStepBackward; 
+@synthesize btnPlay;
+@synthesize btnFastForward;
+@synthesize btnRewind; 
 
 - (void)dealloc
 {
@@ -90,63 +88,103 @@
     
 -(void)playerPlaybackDidFinish:(NSNotification*)notification
 {
-    barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
-    barPlay.tag = 0;
+    [btnPlay setImage:[UIImage imageNamed:@"UIButtonBarPlayGray.png"] forState:UIControlStateNormal];
+    btnPlay.tag = 0;
+}
+
+-(void)resetSlider
+{        
+    [self.sliderTimeline setValue:0 animated:NO];
+    self.moviePlayer.currentPlaybackTime = 0;
 }
 
 -(void)setTotalVideoTimeDuration
-{
+{    
     self.totalVideoTime = self.moviePlayer.duration;
-    //NSLog(@"totalVideoTime: %f",self.totalVideoTime);
+    self.sliderTimeline.totalVideoTime = self.moviePlayer.duration;
+    self.sliderTimeline.minimumValue = 0.0;
+    self.sliderTimeline.maximumValue = self.moviePlayer.duration;
     self.moviePlayer.currentPlaybackTime = 0;
 }
 
 -(IBAction)onTimeSliderChange:(UISlider*)sender
 {
-    self.moviePlayer.currentPlaybackTime = totalVideoTime*sliderTimeline.value;
-    [self monitorPlaybackTime];
+    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;//totalVideoTime*sliderTimeline.value;
+    //[self performSelector:@selector(setCurrentMovieTime) withObject:nil afterDelay:0.1];
+    [self.moviePlayer play];
+    //[self.moviePlayer pause];
+
+}
+
+-(void)setCurrentMovieTime
+{    
+    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;
+    NSLog(@"slidertimeline value: %f", self.moviePlayer.currentPlaybackTime);
+    [self.moviePlayer play];
+    //[self.moviePlayer pause];
 }
 
 -(IBAction)playMovie
 {
     self.moviePlayer.view.hidden = NO;
-    if (barPlay.tag == 0) 
+    if (btnPlay.tag == 0) 
     {       
         if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
         {
             //-------- rewind code:
             self.moviePlayer.currentPlaybackTime = 0;
-            self.sliderTimeline.value = 0.0;
+            [self performSelector:@selector(resetSlider) withObject:nil afterDelay:0.1];
         }        
         
         //NSLog(@"timeline: %f",self.sliderTimeline.value);
-        // self.moviePlayer.currentPlaybackTime = 0;
+        //self.moviePlayer.currentPlaybackTime = 0;
         [self monitorPlaybackTime];
         [self.moviePlayer play];
         
-        barPlay.image = [UIImage imageNamed:@"UIButtonBarPause.png"];
-        barPlay.tag = 1;
+        [btnPlay setImage:[UIImage imageNamed:@"UIButtonBarPauseGray.png"] forState:UIControlStateNormal];
+        btnPlay.tag = 1;
     }
-    else if(barPlay.tag == 1)
+    else if(btnPlay.tag == 1)
     {
         [self.moviePlayer pause];
-        barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
-        barPlay.tag = 0;
+        [btnPlay setImage:[UIImage imageNamed:@"UIButtonBarPlayGray.png"] forState:UIControlStateNormal];
+        btnPlay.tag = 0;
     }          
+}
+
+-(IBAction)fastforward_touchdown
+{
+   self.moviePlayer.currentPlaybackRate = 5; 
+}
+
+-(IBAction)fastforward_touchup
+{
+   self.moviePlayer.currentPlaybackRate = 1; 
+}
+
+-(IBAction)rewind_touchdown
+{
+    self.moviePlayer.currentPlaybackRate = -5;
+}
+
+-(IBAction)rewind_touchup
+{
+    self.moviePlayer.currentPlaybackRate = 1;
 }
 
 -(void)monitorPlaybackTime
 {
-    //NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
-    self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime / self.totalVideoTime;
+    NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
+    self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime;// / self.totalVideoTime;
+    //NSLog(@"sliderTimeline.value: %f",self.moviePlayer.currentPlaybackTime);// / self.totalVideoTime);
     //constantly keep checking if at the end of video:
     if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
     {
         //-------- rewind code:
         //self.moviePlayer.currentPlaybackTime = 0;
         [self.moviePlayer pause];
-        barPlay.image = [UIImage imageNamed:@"UIButtonBarPlay.png"];
-        barPlay.tag = 0;
+        [btnPlay setImage:[UIImage imageNamed:@"UIButtonBarPlayGray.png"] forState:UIControlStateNormal];
+        btnPlay.tag = 0;
     }
     else
     {
