@@ -51,12 +51,10 @@
 -(IBAction)rewind_touchdown; 
 -(IBAction)rewind_touchup; 
 
--(IBAction)rewind; 
 -(void)monitorPlaybackTime;
 -(IBAction)onTimeSliderChange:(UISlider*)sender;
  
 -(void)setTotalVideoTimeDuration;
--(IBAction)setValueByTouch:(UISlider*)sender;
 -(void)resetSlider;
 
 -(IBAction)touchThumbImageDown;
