@@ -44,8 +44,6 @@
 }
 
 #pragma mark - View lifecycle
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
@@ -66,10 +64,11 @@
         //get movie preview image so there will be no blink when the movie starts
         [self performSelector:@selector(setTotalVideoTimeDuration) withObject:nil afterDelay:0.1];
         imgPreviewImage.image = [self.moviePlayer thumbnailImageAtTime:0.0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        imgPreviewImage.hidden = YES;
         
 		// Apply the user specified settings to the movie player object
 		[self setMoviePlayerUserSettings];
-        self.moviePlayer.view.hidden = YES;
+        self.moviePlayer.view.hidden = NO;
         self.moviePlayer.shouldAutoplay = NO;
 		self.moviePlayer.view.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:moviePlayer.view];
@@ -104,24 +103,25 @@
     self.sliderTimeline.totalVideoTime = self.moviePlayer.duration;
     self.sliderTimeline.minimumValue = 0.0;
     self.sliderTimeline.maximumValue = self.moviePlayer.duration;
-    self.moviePlayer.currentPlaybackTime = 0;
+    self.moviePlayer.currentPlaybackTime = 0.1;
 }
 
 -(IBAction)onTimeSliderChange:(UISlider*)sender
 {
-    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;//totalVideoTime*sliderTimeline.value;
-    //[self performSelector:@selector(setCurrentMovieTime) withObject:nil afterDelay:0.1];
-    [self.moviePlayer play];
-    //[self.moviePlayer pause];
-
+    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;  
 }
 
--(void)setCurrentMovieTime
+-(IBAction)touchThumbImageDown
 {    
-    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;
-    NSLog(@"slidertimeline value: %f", self.moviePlayer.currentPlaybackTime);
-    [self.moviePlayer play];
-    //[self.moviePlayer pause];
+   // [self monitorPlaybackTime];
+   // [self.moviePlayer play];
+   // [self.moviePlayer pause];
+}
+
+-(IBAction)touchThumbImageUp
+{
+    //[self monitorPlaybackTime];
+    //[moviePlayer endSeeking];
 }
 
 -(IBAction)playMovie
@@ -131,13 +131,10 @@
     {       
         if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
         {
-            //-------- rewind code:
             self.moviePlayer.currentPlaybackTime = 0;
             [self performSelector:@selector(resetSlider) withObject:nil afterDelay:0.1];
         }        
         
-        //NSLog(@"timeline: %f",self.sliderTimeline.value);
-        //self.moviePlayer.currentPlaybackTime = 0;
         [self monitorPlaybackTime];
         [self.moviePlayer play];
         
@@ -174,14 +171,15 @@
 
 -(void)monitorPlaybackTime
 {
+    if (self.sliderTimeline.IsTouch) 
+        return;
+    
     NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
-    self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime;// / self.totalVideoTime;
-    //NSLog(@"sliderTimeline.value: %f",self.moviePlayer.currentPlaybackTime);// / self.totalVideoTime);
-    //constantly keep checking if at the end of video:
+    self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime;
+    
+    //keep checking for the end of video
     if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
     {
-        //-------- rewind code:
-        //self.moviePlayer.currentPlaybackTime = 0;
         [self.moviePlayer pause];
         [btnPlay setImage:[UIImage imageNamed:@"UIButtonBarPlayGray.png"] forState:UIControlStateNormal];
         btnPlay.tag = 0;
@@ -193,9 +191,7 @@
 }
 
 -(void)setMoviePlayerUserSettings
-{
-    /* Now apply these settings to the active Movie Player (MPMoviePlayerController) object  */
-    
+{    
     /* 
      Movie scaling mode can be one of: MPMovieScalingModeNone, MPMovieScalingModeAspectFit,
      MPMovieScalingModeAspectFill, MPMovieScalingModeFill.
@@ -208,25 +204,12 @@
      The color of the background area behind the movie can be any UIColor value.
      */
 	self.moviePlayer.backgroundView.backgroundColor = [UIColor whiteColor];
-    
-	/*
-     The time relative to the duration of the video when playback should start, if possible. 
-     Defaults to 0.0. When set, the closest key frame before the provided time will be used as the 
-     starting frame.
-     self.moviePlayer.initialPlaybackTime = <specify a movie time here>;
-     
-     */
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return YES;
-}
-
--(IBAction)setValueByTouch:(UISlider*)sender
-{
-    NSLog(@"touch location");
 }
 
 @end

@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329022562.424307"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329022562.424307"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,39 +51,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329038925.911573"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-setTotalVideoTimeDuration"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "228"
-         endingLineNumber = "228"
-         landmarkName = "-setValueByTouch:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329022562.424307"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -93,26 +79,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329038925.911573"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
          landmarkName = "-setTotalVideoTimeDuration"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041466.324569"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "112"
-         endingLineNumber = "112"
-         landmarkName = "-onTimeSliderChange:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -121,11 +93,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomUISlider.m"
-         timestampString = "329024556.218849"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-endTrackingWithTouch:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -135,11 +107,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomUISlider.m"
-         timestampString = "329024556.218849"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-beginTrackingWithTouch:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -149,11 +121,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
          landmarkName = "-monitorPlaybackTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -163,11 +135,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "141"
-         endingLineNumber = "141"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
          landmarkName = "-playMovie"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +149,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "191"
-         endingLineNumber = "191"
+         startingLineNumber = "193"
+         endingLineNumber = "193"
          landmarkName = "-monitorPlaybackTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -191,11 +163,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
          landmarkName = "-fastforward_touchdown"
          landmarkType = "5">
       </FileBreakpoint>
@@ -205,11 +177,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "162"
+         endingLineNumber = "162"
          landmarkName = "-fastforward_touchup"
          landmarkType = "5">
       </FileBreakpoint>
@@ -219,12 +191,54 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
-         timestampString = "329041879.9261"
+         timestampString = "329370302.845974"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "-setCurrentMovieTime"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
+         landmarkName = "-touchThumbImageDown"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
+         timestampString = "329370302.845974"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "125"
+         endingLineNumber = "125"
+         landmarkName = "-touchThumbImageUp"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "CustomMoviePlayer/CustomMoviePlayerViewController.m"
+         timestampString = "329370302.845974"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
+         landmarkName = "-fastforward_touchdown"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "CustomMoviePlayer/CustomUISlider.m"
+         timestampString = "329370302.845974"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-beginTrackingWithTouch:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

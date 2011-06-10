@@ -31,32 +31,20 @@
 }
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-       
+           
+    CGPoint touchPoint = [touch locationInView:self];
     IsTouch = YES;
     
-    CGPoint touchPoint = [touch locationInView:self];
-    
-    if(!CGRectContainsPoint(self.thumbRect, touchPoint)) 
-    {
-        NSLog(@"totalvideotime: %f",self.totalVideoTime);
-        
-        CGFloat touchDivider = self.frame.size.width/self.totalVideoTime;
-        
-        CGFloat touchedLocation = touchPoint.x/touchDivider;
-        
-        NSLog(@"touched value: %f",touchedLocation);
-        //NSLog(@"width: %f",self.frame.size.width);
-        NSLog(@"touhcpoint: %@",NSStringFromCGPoint(touchPoint));
-        
-        [self setValue:touchedLocation animated:NO];
-    }   
-
+    CGFloat touchDivider = self.frame.size.width/self.totalVideoTime;
+    CGFloat touchedLocation = touchPoint.x/touchDivider;
+       
+    [self setValue:touchedLocation animated:NO];
     
     return [super beginTrackingWithTouch:touch withEvent:event];
 }
 
-- (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    
+- (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event 
+{    
     NSLog(@"in continuetracking");    
     
     return [super continueTrackingWithTouch:touch withEvent:event];
@@ -70,10 +58,9 @@
    
     NSLog(@"in endtracking");
     
-       
+    IsTouch = NO;   
     [super endTrackingWithTouch:touch withEvent:event];
 }
-
 
 - (void)dealloc
 {

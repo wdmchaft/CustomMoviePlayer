@@ -62,6 +62,8 @@
 -(void)setTotalVideoTimeDuration;
 -(IBAction)setValueByTouch:(UISlider*)sender;
 -(void)resetSlider;
--(void)setCurrentMovieTime;
+
+-(IBAction)touchThumbImageDown;
+-(IBAction)touchThumbImageUp;
 
 @end

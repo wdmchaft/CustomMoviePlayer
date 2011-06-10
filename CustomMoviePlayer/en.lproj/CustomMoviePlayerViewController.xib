@@ -144,7 +144,6 @@
 								<string key="NSFrame">{{698, 6}, {21, 33}}</string>
 								<reference key="NSSuperview" ref="81689964"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
@@ -343,6 +342,24 @@
 					</object>
 					<int key="connectionID">63</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">touchThumbImageDown</string>
+						<reference key="source" ref="828200265"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">touchThumbImageUp</string>
+						<reference key="source" ref="828200265"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">65</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -517,7 +534,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">63</int>
+			<int key="maxID">65</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -537,6 +554,8 @@
 							<string>rewind_touchdown</string>
 							<string>rewind_touchup</string>
 							<string>setValueByTouch:</string>
+							<string>touchThumbImageDown</string>
+							<string>touchThumbImageUp</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -548,6 +567,8 @@
 							<string>id</string>
 							<string>id</string>
 							<string>UISlider</string>
+							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
@@ -562,6 +583,8 @@
 							<string>rewind_touchdown</string>
 							<string>rewind_touchup</string>
 							<string>setValueByTouch:</string>
+							<string>touchThumbImageDown</string>
+							<string>touchThumbImageUp</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -596,6 +619,14 @@
 							<object class="IBActionInfo">
 								<string key="name">setValueByTouch:</string>
 								<string key="candidateClassName">UISlider</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">touchThumbImageDown</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">touchThumbImageUp</string>
+								<string key="candidateClassName">id</string>
 							</object>
 						</object>
 					</object>
