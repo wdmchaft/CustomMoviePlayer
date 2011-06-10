@@ -21,9 +21,7 @@
     IBOutlet UIButton *btnFastForward;
     IBOutlet UIButton *btnRewind;
     
-    NSString *filePath;
-    NSString *movieTitle;
-    NSString *player_type;
+    NSString *filePath; 
         
     MPMoviePlayerController *moviePlayer;
     NSTimeInterval totalVideoTime; 
@@ -39,11 +37,9 @@
 @property(nonatomic, retain) IBOutlet UIButton *btnFastForward;
 @property(nonatomic, retain) IBOutlet UIButton *btnRewind;
 
-@property(nonatomic, retain) NSString *filePath;
-@property(nonatomic, retain) NSString *movieTitle;
-@property(nonatomic, retain) NSString *player_type;
+@property(nonatomic, retain) NSString *filePath; 
 
-@property (readwrite, retain) MPMoviePlayerController *moviePlayer;
+@property(readwrite, retain) MPMoviePlayerController *moviePlayer;
 @property(nonatomic, assign) NSTimeInterval totalVideoTime;
 
 -(void)setMoviePlayerUserSettings;

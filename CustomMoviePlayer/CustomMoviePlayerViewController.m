@@ -12,8 +12,6 @@
 
 @synthesize sliderTimeline;
 @synthesize filePath;
-@synthesize movieTitle;
-@synthesize player_type;
 
 @synthesize moviePlayer;
 @synthesize totalVideoTime;
@@ -116,12 +114,13 @@
    // [self monitorPlaybackTime];
    // [self.moviePlayer play];
    // [self.moviePlayer pause];
+    self.moviePlayer.currentPlaybackTime = sliderTimeline.value;  
 }
 
 -(IBAction)touchThumbImageUp
 {
-    //[self monitorPlaybackTime];
-    //[moviePlayer endSeeking];
+    self.sliderTimeline.IsTouch = NO;
+    //[self performSelector:@selector(monitorPlaybackTime) withObject:nil afterDelay:0.1];
 }
 
 -(IBAction)playMovie
@@ -174,8 +173,8 @@
     if (self.sliderTimeline.IsTouch) 
         return;
     
-    NSLog(@"currentPlaybackTime: %f",self.moviePlayer.currentPlaybackTime);
     self.sliderTimeline.value = self.moviePlayer.currentPlaybackTime;
+    NSLog(@"currenttime: %f",self.moviePlayer.currentPlaybackTime);
     
     //keep checking for the end of video
     if (self.totalVideoTime != 0 && self.moviePlayer.currentPlaybackTime >= totalVideoTime)
