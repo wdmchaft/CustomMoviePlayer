@@ -111,16 +111,12 @@
 
 -(IBAction)touchThumbImageDown
 {    
-   // [self monitorPlaybackTime];
-   // [self.moviePlayer play];
-   // [self.moviePlayer pause];
     self.moviePlayer.currentPlaybackTime = sliderTimeline.value;  
 }
 
 -(IBAction)touchThumbImageUp
 {
     self.sliderTimeline.IsTouch = NO;
-    //[self performSelector:@selector(monitorPlaybackTime) withObject:nil afterDelay:0.1];
 }
 
 -(IBAction)playMovie
