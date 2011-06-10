@@ -3,9 +3,9 @@ Custom MoviePlayer for iPad
 
 <img style="float:right" src="https://github.com/joshgrenon/CustomMoviePlayer/raw/master/screenshot.png" alt="Screenshot" />
 
-Features:
-- Drag UISlider thumb indicator and touch UISlider progress line to go jump back and forth between movie frames.
-- Fastforward and rewind buttons
+- Features:
+	- Drag UISlider thumb indicator and touch UISlider progress line to go jump back and forth between movie frames.
+	- Fastforward and rewind buttons
 
 How to install:
 
